@@ -1,9 +1,14 @@
 package src;
-public class player {
+public class Player {
 
     private String playerName;
 
-    public player(String playerName) {
+    private Hand hand;
+
+
+
+
+    public Player(String playerName) {
 
         this.playerName = playerName;
 
@@ -21,4 +26,16 @@ public class player {
 
     }
 
+    public Hand getHand() {
+
+        return this.hand;
+
+    }
+    public void setHand(Hand hand) {
+
+        this.hand = hand;
+
+    }
+
 }
+
