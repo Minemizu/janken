@@ -1,5 +1,6 @@
 package src;
 import java.io.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -48,7 +49,21 @@ public class Main {
         com.createRandomHand();
         //テストコード
 //        System.out.println(com.getHand().getHandName());
-//        int result = game.judge(user, com);
+        Game game = new Game();
+        int result = game.judge(user, com);
+        System.out.println(
+                user.getPlayerName() + "の手:" + user.getHand().getHandName()
+        );
+        System.out.println(
+                com.getPlayerName() + "の手:" + com.getHand().getHandName()
+        );
+        if (result < 0) {
+            System.out.println("結果:" + user.getPlayerName() + "の負け");
+        } else if (result > 0) {
+            System.out.println("結果:" + user.getPlayerName() + "の勝ち");
+        } else {
+            System.out.println("結果:あいこ");
+        }
     }
 }
 

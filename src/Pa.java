@@ -12,7 +12,7 @@ public class Pa implements Hand{
      */
     public int compare(Hand hand) {
         if(hand instanceof Choki) {    //チョキ　vs グー（自分）
-            return 1;
+            return -1;
         } else if(hand instanceof Pa) {    //パー　vs パー（自分）
             return 0;
         } else {
